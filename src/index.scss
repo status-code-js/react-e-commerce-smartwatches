@@ -1,0 +1,294 @@
+body {
+    margin: 0;
+    font-family: 'Work Sans', sans-serif;
+    color: #282B1E;
+    font-size: 0.87em;
+}
+
+* {
+    font-family: 'Work Sans', sans-serif;
+}
+
+.wrapper {
+    max-width: 67.5em;
+    margin: 0 auto;
+    background-color: #ffffff;
+    margin-top: 5.3em;
+    padding: 2.8em;
+}
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      
+    }
+
+        .brand {
+           display: flex;
+           align-items: center;
+
+        }
+            .favorite-icon {
+                width: 2.5em;
+                height: 2.5em;
+                margin-left: -1em;
+            }
+
+            h3 {
+                margin-bottom: 0;
+                font-size: 1.45em;
+                line-height: 1.5em;
+                font-weight: 700;
+            }
+
+            .brand-text {
+                margin-left: 1em;
+                margin-top: -1em;
+                align-items: top;
+            }
+
+            .brand-p {
+                font-size: 1.06em;
+                line-height: 1.06em;
+                font-weight: 400;
+            }
+
+        .icons-list {
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+            .icons-list__item {
+                margin-left: 1.8em;
+            } 
+            
+            .icons-list__item:nth-child(1) {
+                margin-left: 0em;
+            }
+                .header-price  {
+                    margin-left: 0.6em;
+                    font-size: 1.06em;
+                    font-weight: 400;
+                }
+.search-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2.5em;
+    margin-bottom: 2.5em;
+}
+    .search-block {
+        border: 1px solid #F3F3F3;
+        border-radius: 0.6em;
+        width: 15.6em;
+        height: 2.8em;
+        display: flex;
+        align-items: center;
+        padding: 0em 0.4em;
+        align-items: center;
+       
+    }
+        input {
+            border: 0;
+            margin-left: 0.5em;
+            font-size: 1em;
+        }
+
+.card-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+    .card {
+        padding: 1.8em;
+        border-radius: 1.2em;
+        border: 1px solid #F3F3F3;
+        max-width: 10em;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-right: 2.5em;
+        margin-bottom: 2.5em;    
+        transition: box-shadow 0.2s ease-in-out;
+        transform: 0.2s ease-in-out;
+
+        &:hover {
+            box-shadow: 0px 14px 30px 0px #0000000D;
+            transform: translateY(-4p);
+        }
+    }
+
+    .card:nth-child(4),
+    .card:nth-child(8),
+    .card:nth-child(12) {
+        margin-right: 0em;
+    }   
+
+        .favorite {
+            position: absolute;
+            cursor: pointer;
+        }
+
+            img {
+                width: 2em;
+                height: 2em;
+            }
+
+        p {
+            margin-top: 2em;
+        }
+
+        .price-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: none;
+            max-width: 17em;
+            margin-top: 2em;
+        }
+
+            .price {
+                display: flex;
+                flex-direction: column;
+            }
+
+                span {
+                    line-height: 0.8em;
+                }
+
+                b {
+                    font-weight: 700;
+                    line-height: 1.06em;
+                    margin-top: 0.5em;
+                }
+
+                button {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 2em;
+                    height: 2em;
+                    background-color: #ffffff;
+                    border: 1px solid #F2F2F2;
+                    border-radius: 0.5em;
+                }
+.overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9;
+    display: none;
+}
+          
+    .side-block {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        width: 26em;
+        height: 100%;
+        right: 0;
+        background-color: #ffffff;
+        box-shadow: -10px 4px 24px rgba(0, 0, 0, 0.1);
+        padding: 1.8em;
+    } 
+    
+        h2 {
+            font-size: 1.5em;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        .cart-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #F3F3F3;
+            border-radius: 1.2em;
+            overflow: hidden;
+            padding: 0em 1em 1em 1em;
+            margin-top: 1.8em;
+            margin-bottom: 1.8em;
+        }
+
+            img {
+                width: 4.3em;
+                height: 4.3em;
+                margin-right: 1.25em;
+
+            }
+
+            .cart-text {
+                margin-right: 1.25em;
+            }
+
+                p {
+                    margin-bottom: 0.3em;
+                    font-size: 1em;
+                }
+
+                b {
+                    font-size: 0.9em; 
+                }
+
+            .plus-icon,
+            .cross-icon {
+                opacity: 0.5;
+                cursor: pointer;
+                transition: opacity 0.15s ease-in-out;
+
+                &:hover {
+                    opacity: 1;
+                }
+            }
+    .side-block__title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }        
+        .items {
+            flex: 1;
+            overflow: auto;
+            margin-bottom: 1.25em;
+        }
+        
+        .list {
+            margin-bottom: 3em;
+        }
+        
+            .list-item {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-end;
+                margin-bottom: 1em;
+            }
+                .separator {
+                    flex: 1;
+                    border: 1px dashed #DFDFDF;
+                    position: relative;
+                    margin: 0 7px;
+                }
+            .btn-wrapper {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .btn-buy {
+                background: #282B1E;
+                color: #F5F5F5;
+                border-radius: 1.1em;
+                font-size: 1.2em;
+                font-weight: 600;
+                padding: 1.1em 8em;
+                transition: opacity 0.2s ease-in-out;
+
+                &:hover {
+                    opacity: 0.8;
+                }
+            }
+            
+               
