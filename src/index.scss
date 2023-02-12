@@ -28,7 +28,7 @@ body {
            align-items: center;
 
         }
-            .favorite-icon {
+            .favorite__icon {
                 width: 2.5em;
                 height: 2.5em;
                 margin-left: -1em;
@@ -41,44 +41,44 @@ body {
                 font-weight: 700;
             }
 
-            .brand-text {
+            .brand__text {
                 margin-left: 1em;
                 margin-top: -1em;
                 align-items: top;
             }
 
-            .brand-p {
+            .brand__p {
                 font-size: 1.06em;
                 line-height: 1.06em;
                 font-weight: 400;
             }
 
-        .icons-list {
+        .icons__list {
             list-style: none;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
-            .icons-list__item {
+            .icons__list-item {
                 margin-left: 1.8em;
             } 
             
-            .icons-list__item:nth-child(1) {
+            .icons__list-item:nth-child(1) {
                 margin-left: 0em;
             }
-                .header-price  {
+                .header__price  {
                     margin-left: 0.6em;
                     font-size: 1.06em;
                     font-weight: 400;
                 }
-.search-wrapper {
+.search__wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-top: 2.5em;
     margin-bottom: 2.5em;
 }
-    .search-block {
+    .search__block {
         border: 1px solid #F3F3F3;
         border-radius: 0.6em;
         width: 15.6em;
@@ -95,7 +95,7 @@ body {
             font-size: 1em;
         }
 
-.card-wrapper {
+.card__wrapper {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -140,7 +140,7 @@ body {
             margin-top: 2em;
         }
 
-        .price-wrapper {
+        .price__wrapper {
             display: flex;
             justify-content: space-between;
             align-items: none;
@@ -181,10 +181,9 @@ body {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 9;
-    display: none;
 }
           
-    .side-block {
+    .side__block {
         position: absolute;
         display: flex;
         flex-direction: column;
@@ -202,7 +201,7 @@ body {
             margin: 0;
         }
 
-        .cart-item {
+        .cart__item {
             display: flex;
             align-items: center;
             justify-content: center;
@@ -221,7 +220,7 @@ body {
 
             }
 
-            .cart-text {
+            .cart__text {
                 margin-right: 1.25em;
             }
 
@@ -234,17 +233,25 @@ body {
                     font-size: 0.9em; 
                 }
 
-            .plus-icon,
-            .cross-icon {
-                opacity: 0.5;
+            .plus__icon,
+            .cross__icon {
                 cursor: pointer;
                 transition: opacity 0.15s ease-in-out;
+                width: 2em;
+                height: 2em;
 
                 &:hover {
-                    opacity: 1;
+                    opacity: 0.6;
                 }
             }
-    .side-block__title {
+
+            .favorite__icon-checked {
+                cursor: pointer;
+                width: 2em;
+                height: 2em;
+            }
+
+    .side__block-title {
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -259,7 +266,7 @@ body {
             margin-bottom: 3em;
         }
         
-            .list-item {
+            .list__item {
                 display: flex;
                 justify-content: space-between;
                 align-items: flex-end;
@@ -271,13 +278,13 @@ body {
                     position: relative;
                     margin: 0 7px;
                 }
-            .btn-wrapper {
+            .btn__wrapper {
                 display: flex;
                 justify-content: center;
                 align-items: center;
             }
 
-            .btn-buy {
+            .btn__buy {
                 background: #282B1E;
                 color: #F5F5F5;
                 border-radius: 1.1em;

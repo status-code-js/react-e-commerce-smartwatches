@@ -1,59 +1,45 @@
 import React from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faXmark } from '@fortawesome/free-solid-svg-icons'
 
 
-const fontStyles = {color: '#868D70', fontSize: '18px'}
-
-function Overlay() {
+function Overlay({ onCloseCart, items = []}) {
   return (
     <div>
         <div className="overlay">
-        <div className="side-block">
-          <div className="side-block__title">
+        <div className="side__block">
+          <div className="side__block-title">
           <h2>Your Cart</h2>
-          <button>
-            <FontAwesomeIcon className="cross-icon" icon={faXmark} style={fontStyles} />
-          </button>
+            <img onClick={onCloseCart} className="cross__icon" src="./assets/cross__icon.svg" alt="cross-icon" />
           </div>
-          
           <div className="items">
-           <div className="cart-item">
-            <img src="./assets/1.jpeg" alt="watch-1" />
-            <div className="cart-text">
-              <p>APPLE Watch Series 8 GPS+Cellular 45mm Grafito Loop</p>
-              <b>914,99€</b>
-           </div>
-           <button>
-           <FontAwesomeIcon className="cross-icon" icon={faXmark} style={fontStyles} />
-          </button>
-          </div>
-            <div className="cart-item">
-            <img src="./assets/1.jpeg" alt="watch-1" />
-            <div className="cart-text">
-              <p>APPLE Watch Series 8 GPS+Cellular 45mm Grafito Loop</p>
-              <b>914,99€</b>
-           </div>
-           <button>
-           <FontAwesomeIcon className="cross-icon" icon={faXmark} style={fontStyles} />
-          </button>
+            {items.map((obj) => (
+              <div className="cart__item">
+              <img src={obj.image} alt="watch-1" />
+              <div className="cart__text">
+                <p>{obj.name}</p>
+                <b>{obj.price}€</b>
+             </div>
+             <button>
+             <img className="cross__icon" src="./assets/cross__icon.svg" alt="cross-icon" />
+            </button>
             </div>
+              )
+            )}           
           </div>
           <div> 
           <ul className="list">
-            <li className="list-item">
+            <li className="list__item">
               <span>Total:</span>
               <div className="separator"></div>
               <b>599,99€</b>
             </li>
-            <li className="list-item">
+            <li className="list__item">
               <span>Tax:</span>
               <div className="separator"></div>
               <b>25€</b>
             </li>
           </ul>
-          <div className="btn-wrapper">
-          <button className="btn-buy">Buy</button>
+          <div className="btn__wrapper">
+          <button className="btn__buy">Buy</button>
           </div>
           </div>
         </div>

@@ -1,31 +1,39 @@
 import React from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPlus } from '@fortawesome/free-solid-svg-icons'
+import { useState } from 'react'
 
-const fontStyles = {color: '#868D70', fontSize: '18px'}
 
-function Card() {
+function Card({ image, name, price, onFavorite, onPlus }) {
+
+  const [isAdded, setIsAdded] = useState(false)
+
+  const onClickPlus = () => {
+    onPlus({image, name, price})
+    setIsAdded(!isAdded)
+  }
+
+ 
   return (
     <div>
-         <div className="card-wrapper">
+         
       <div className="card">
        <div className="favorite">
-        <img className="favorite-icon" src="./assets/heart.svg" alt="heart-unlike" />
+       <img className="favorite__icon" src="./assets/heart.svg" alt="heart-unlike" onClick={onFavorite}/>
        </div>
-        <img className="img-card" src="./assets/1.jpeg" alt="watch-1" style={{ width: '150px', height: '112px'}}/>
-        <p>APPLE Watch Series 8 GPS+Cellular 45mm Grafito Loop</p>
-        <div className="price-wrapper">
+        <img className="img__card" src={image} alt="watch-1" style={{ width: '150px', height: '112px'}}/>
+        <p>{name}</p>
+        <div className="price__wrapper">
           <div className="price">
             <span>Price:</span>
-            <b>914,99€</b>
+            <b>{price} €</b>
           </div>
-          <button>
-          <FontAwesomeIcon className="plus-icon" icon={faPlus} style={fontStyles} />
-          </button>
+          <img 
+          className="plus__icon"
+          src={isAdded ? "./assets/favorite-checked.svg" : "./assets/plus__icon.svg"} alt="plus-icon" onClick={onClickPlus}
+          />
         </div>
       </div>
     </div>
-    </div>
+    
 
   )
 }
