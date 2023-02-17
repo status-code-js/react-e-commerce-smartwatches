@@ -16,7 +16,7 @@ function Header(props) {
           </div>
         </div>
         <ul className="icons__list">
-          <li onClick={props.onClickCart}className="icons__list-item" style={{cursor: 'pointer'}}>
+          <li onClick={props.onClickCart} className="icons__list-item" style={{cursor: 'pointer'}}>
           <FontAwesomeIcon icon={faCartShopping} style={fontStyles} />
           <span className="header__price">420€</span>
           </li>

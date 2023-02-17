@@ -1,7 +1,8 @@
 import React from 'react'
 
 
-function Overlay({ onCloseCart, items = []}) {
+function Overlay({ onCloseCart, items = []} ) {
+
   return (
     <div>
         <div className="overlay">
@@ -18,10 +19,8 @@ function Overlay({ onCloseCart, items = []}) {
                 <p>{obj.name}</p>
                 <b>{obj.price}€</b>
              </div>
-             <button>
              <img className="cross__icon" src="./assets/cross__icon.svg" alt="cross-icon" />
-            </button>
-            </div>
+            </div> 
               )
             )}           
           </div>
