@@ -50,6 +50,8 @@ function App() {
           <div className="search__block">
             <FontAwesomeIcon icon={faMagnifyingGlass} style={{color: '#868D70', fontSize:'14px'}} />
             <input onChange={onChangeSearchInput} value={searchValue} placeholder={'Search...'}></input>
+            {searchValue && <img onClick={() => setSearchValue('')} className="cross__icon cross__icon-search" src="./assets/cross__icon.svg" alt="cross-icon" />}
+            
           </div>
         </div>
       </div>
