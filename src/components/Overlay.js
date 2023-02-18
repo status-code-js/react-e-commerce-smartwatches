@@ -1,7 +1,7 @@
 import React from 'react'
 
 
-function Overlay({ onCloseCart, items = []} ) {
+function Overlay({ onCloseCart, items = [], onRemove} ) {
 
   return (
     <div>
@@ -19,7 +19,7 @@ function Overlay({ onCloseCart, items = []} ) {
                 <p>{obj.name}</p>
                 <b>{obj.price}€</b>
              </div>
-             <img className="cross__icon" src="./assets/cross__icon.svg" alt="cross-icon" />
+             <img onClick={() => onRemove(obj.id)} className="cross__icon" src="./assets/cross__icon.svg" alt="cross-icon" />
             </div> 
               )
             )}           

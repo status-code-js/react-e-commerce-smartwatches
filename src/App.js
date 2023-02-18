@@ -35,12 +35,18 @@ function App() {
         axios.post('https://63e8e7084f3c6aa6e7c4c400.mockapi.io/cart', obj)
         setCartItems((prev) => [...prev, obj])  
       }
+
+    const onRemoveFromCart = (id) => {
+        axios.delete(`https://63e8e7084f3c6aa6e7c4c400.mockapi.io/cart/${id}`)
+        setCartItems((prev) => prev.filter(item => item.id !== id))
+
+    }
         
     
 
   return (
     <div className="wrapper">
-      {cartOpened ? <Overlay items={cartItems} onCloseCart={() => setCartOpened(false)}/> : null}
+      {cartOpened && <Overlay items={cartItems} onCloseCart={() => setCartOpened(false)} onRemove={onRemoveFromCart}/>}
       <Header onClickCart={() => setCartOpened(true)} />
       <div className="fold"></div>
       <div>
