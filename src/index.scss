@@ -166,8 +166,6 @@ body {
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    width: 2em;
-                    height: 2em;
                     background-color: #ffffff;
                     border: 1px solid #F2F2F2;
                     border-radius: 0.5em;
@@ -198,6 +196,36 @@ body {
             font-size: 1.5em;
             font-weight: 700;
             margin: 0;
+        }
+
+        .cart__empty {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin-top: 5em;
+        }
+
+        .cart__empty-img {
+            width: 7.5em;
+            height: 7.5em;
+            margin-bottom: 1.8em;
+        }
+
+        .cart__empty-btn {
+            display: flex;    
+            background: #282B1E;
+                color: #F5F5F5;
+                border-radius: 1.1em;
+                font-size: 1.2em;
+                font-weight: 600;
+                padding: 1.1em 4em;
+                margin-top: 1.8em;
+                transition: opacity 0.2s ease-in-out;
+       
+            &:hover {
+                opacity: 0.8;
+            }
         }
 
         .cart__item {
