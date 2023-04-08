@@ -14,7 +14,8 @@ function Overlay({ onCloseCart, items = [], onRemove} ) {
           
           {items.length > 0 
           ? 
-          <div><div className="items">
+          <div className="items__wrapper">
+              <div className="items">
           {items.map((obj) => (
             <div className="cart__item">
             <img src={obj.image} alt="watch-1" />

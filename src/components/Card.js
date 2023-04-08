@@ -14,7 +14,6 @@ function Card({ image, name, price, onFavorite, onPlus }) {
  
   return (
     <div>
-         
       <div className="card">
        <div className="favorite">
        <img className="favorite__icon" src="./assets/heart.svg" alt="heart-unlike" onClick={onFavorite}/>

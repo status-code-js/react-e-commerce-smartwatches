@@ -6,6 +6,7 @@ import Header from './components/Header'
 import Overlay from './components/Overlay'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
+import Footer from "./components/Footer";
 
 
 
@@ -53,6 +54,7 @@ function App() {
         
 
   return (
+      <div>
     <div className="wrapper">
       {cartOpened && <Overlay items={cartItems} onCloseCart={() => setCartOpened(false)} onRemove={onRemoveFromCart}/>}
       <Header onClickCart={() => setCartOpened(true)} />
@@ -82,6 +84,8 @@ function App() {
           />
         ))}
         </div>
+    </div>
+        <Footer />
       </div>
   );
 }
