@@ -22,7 +22,7 @@ function Overlay({ onCloseCart, items = [], onRemove} ) {
               <p>{obj.name}</p>
               <b>{obj.price}€</b>
            </div>
-           <img onClick={() => onRemove(obj.id)} className="cross__icon" src="./assets/cross__icon.svg" alt="cross-icon" />
+           <img onClick={() => onRemove(obj.id)} className="cross__icon-delete" src="./assets/cross__icon.svg" alt="cross-icon" />
           </div> 
             )
           )}           

@@ -261,7 +261,8 @@ body {
                 }
 
             .plus__icon,
-            .cross__icon {
+            .cross__icon,
+            .cross__icon-delete {
                 cursor: pointer;
                 transition: opacity 0.15s ease-in-out;
                 width: 2em;
@@ -271,6 +272,7 @@ body {
                     opacity: 0.6;
                 }
             }
+
             .cross__icon-search {
                 width: 1.5em;
                 height: 1.5em;

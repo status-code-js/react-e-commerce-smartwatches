@@ -32,17 +32,25 @@ function App() {
   }, [])
 
     const onAddToCart = (obj) => {
-        axios.post('https://63e8e7084f3c6aa6e7c4c400.mockapi.io/cart', obj)
-        setCartItems((prev) => [...prev, obj])  
-      }
+            axios.post('https://63e8e7084f3c6aa6e7c4c400.mockapi.io/cart', obj)
+                .then(res => setCartItems(prev => [...prev, res.data]))
+                .catch((error) => {
+                console.error('Error on adding to cart', error);
+            });
+    }
+
 
     const onRemoveFromCart = (id) => {
-        axios.delete(`https://63e8e7084f3c6aa6e7c4c400.mockapi.io/cart/${id}`)
-        setCartItems((prev) => prev.filter(item => item.id !== id))
 
+        axios.delete(`https://63e8e7084f3c6aa6e7c4c400.mockapi.io/cart/${id}`)
+            .then(() => {
+                setCartItems((prev) => prev.filter((item) => item.id !== id))
+            })
+            .catch((error) => {
+               console.log(error)
+            })
     }
         
-    
 
   return (
     <div className="wrapper">
@@ -63,9 +71,9 @@ function App() {
       </div>
     </div>
         <div className="card__wrapper">
-        {items.filter((item) => item.name.toLowerCase().includes(searchValue.toLowerCase())).map((item, id) => (
+        {items.filter((item) => item.name.toLowerCase().includes(searchValue.toLowerCase())).map((item) => (
           <Card
-            key={id}
+            key={item.id}
             name={item.name}
             price={item.price}
             image={item.image}
