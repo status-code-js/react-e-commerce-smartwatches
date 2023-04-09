@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/react-e-commerce-smartwatches/static/css/main.cae922a7.css",
+    "main.js": "/react-e-commerce-smartwatches/static/js/main.bd90bad9.js",
+    "index.html": "/react-e-commerce-smartwatches/index.html",
+    "main.cae922a7.css.map": "/react-e-commerce-smartwatches/static/css/main.cae922a7.css.map",
+    "main.bd90bad9.js.map": "/react-e-commerce-smartwatches/static/js/main.bd90bad9.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.cae922a7.css",
+    "static/js/main.bd90bad9.js"
+  ]
+}
